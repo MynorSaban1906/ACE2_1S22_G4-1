@@ -1,12 +1,12 @@
 const express = require("express");
 const indexRoutes = require("./routes/index.routes");
-const dbo = require('./database/conn');
+const dbo = require("./database/conn");
 
 const app = express();
 const PORT = 5000;
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(indexRoutes);
 
 // perform a database connection when the server starts

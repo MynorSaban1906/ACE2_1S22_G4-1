@@ -20,3 +20,7 @@ services:
       - "27020:27017"
     logging:  # Do not see logs
       driver: none
+    volumes:
+      - mongodata:/data/db
+volumes:
+  mongodata:

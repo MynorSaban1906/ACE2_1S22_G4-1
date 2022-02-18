@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient } = require("mongodb");
 const connectionString = "mongodb://database/practica1";
 
 const client = new MongoClient(connectionString, {
@@ -15,8 +15,8 @@ module.exports = {
         return callback(err);
       }
 
-      dbConnection = db.db('data');
-      console.log('Successfully connected to MongoDB.');
+      dbConnection = db.db("data");
+      console.log("Successfully connected to MongoDB.");
 
       return callback();
     });

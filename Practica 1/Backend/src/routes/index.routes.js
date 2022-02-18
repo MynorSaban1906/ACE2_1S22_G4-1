@@ -12,18 +12,18 @@ router.get("/", (req, res) => {
 /* ==================== GET DATA================= */
 
 router.get("/measure", (req, res) => {
-    const dbConnect = dbo.getDb();
+  const dbConnect = dbo.getDb();
 
-    dbConnect
-    .collection('measure')
+  dbConnect
+    .collection("measure")
     .find({})
     .toArray(function (err, result) {
       if (err) {
-        res.status(400).send('Error fetching measures!');
+        res.status(400).send("Error fetching measures!");
       } else {
         res.json(result);
       }
-    });    
+    });
 });
 
 /* ==================== NEW DATA================= */
@@ -32,7 +32,9 @@ router.post("/measure", (req, res) => {
   const dbConnect = dbo.getDb();
 
   // data simulation
-  const newData = JSON.parse('{"indoorTemperature":20, "outsideTemperature":30}');
+  const newData = JSON.parse(
+    '{"indoorTemperature":20, "outsideTemperature":30}'
+  );
 
   dbConnect.collection("measure").insertOne(newData, function (err, result) {
     if (err) {
