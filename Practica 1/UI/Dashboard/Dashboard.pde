@@ -4,6 +4,9 @@ int temperaturaExterna = 0;
 int cantidadLuz = 0;
 int humedad = 0;
 int medicionCO2=0;
+int count;
+Module[] mods;
+int unit=40;
 
 JSONObject json;           // se utiliza para recibir los datos a mostrar
 int current;
@@ -14,12 +17,19 @@ void setup() {
   size(1280, 720);
   noStroke();
   background(0);
+  ejecutar(40,0.5);
 }
 
 void draw() {
   fill (52, 73, 94 );
   rect(20, 20, 1240, 680, 20);
   setTitle();
+  
+  for (Module mod : mods) {
+    mod.update(obtenerRepresentacionVelCo2());
+    //mod.setUnit(10);
+    mod.display();
+  }
   sensorLuz(cantidadLuz);
   graficoTemperatura(100, temperaturaInterna, "Temperatura del ambiente");
   graficoTemperatura(400, temperaturaExterna, "Temperatura en el interior");
@@ -134,4 +144,22 @@ void sensorCO2(int co2){
    fill(255);
   textSize(128);
   text(co2 +" ppm", 890, 550);
+}
+
+
+void ejecutar(int unit, float speed) {
+  int wideCount = 400 / unit; //alto / cantidad
+  int highCount = 200 / unit; // ancho / cantidad
+  count = wideCount * highCount;
+  mods = new Module[count];
+  int index = 0;
+  for (int y = 0; y < highCount; y++) {
+    for (int x = 0; x < wideCount; x++) {
+      mods[index++] = new Module(700+x*unit,430+y*unit, unit/2, unit/2, speed, unit);
+    }
+  }
+}
+
+int obtenerRepresentacionVelCo2(){
+  return 120;
 }
