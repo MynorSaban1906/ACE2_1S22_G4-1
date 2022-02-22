@@ -2,7 +2,8 @@
 const serialPort = require('serialport')
 const readLine = require("@serialport/parser-readline");
 
-const serial = new serialPort('COM3', { baudRate: 9600 })
+
+const serial = new serialPort('COM3', {autoOpen:false, baudRate: 9600 })
 const parser = serial.pipe(new readLine({ delimiter: '\n' }))
 
 // ==================== EXPRESS && MONGO ====================
@@ -33,6 +34,19 @@ dbo.connectToServer(function (err) {
 });
 
 // ==================== SERIAL COMMUNICATION ====================
+
+serial.open(function(err){
+         
+  if(err){
+      //alert("Failed to open port.");
+      console.log("error-----------")
+  }
+  else{
+      console.log("NO error-----------")
+  }
+
+});
+
 serial.on("open", () => {
   console.log("Open serial port");
 });
@@ -40,12 +54,13 @@ serial.on("open", () => {
 parser.on("data", (data) => {
   
   console.log(`<-- ${data}`);
-
+  //<-- {"dato": 9}
   if (data !== undefined) {
     try {
+
       newRegister(data)
     } catch (error) {
-      console.log(`Error to insert in mongo: ${err}`);
+      console.log(`Error to insert in mongo: ${error}`);
     }
   }
 

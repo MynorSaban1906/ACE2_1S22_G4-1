@@ -1,5 +1,5 @@
 const { MongoClient } = require("mongodb");
-const connectionString = "mongodb://database/practica1";
+const connectionString = "mongodb://localhost:27017";
 
 const client = new MongoClient(connectionString, {
   useNewUrlParser: true,

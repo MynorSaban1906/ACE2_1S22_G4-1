@@ -6,18 +6,13 @@ function newRegister (data) {
   newMeasure = JSON.parse(data)
 
   if (newMeasure !== undefined) {
-
-    dbConnect.collection("measure").insertOne(newMeasure, function (err, result) {
-      if (err) {
-        res.status(400).send("¡Error inserting data!");
-      } else {
-        console.log(`Was inserted successfully`);
-        res.status(204).send();
-      }
+    console.log("data en json: ", newMeasure);
+    dbConnect.collection("measure").insertOne(newMeasure, (err, res) => {
+      if (err) throw err;
     });
 
   }
-  res.status(400).send("¡Error inserting data undefined!");
+
 }
 
 module.exports = newRegister;
