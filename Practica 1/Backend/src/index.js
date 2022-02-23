@@ -53,7 +53,7 @@ serial.on("open", () => {
 
 parser.on("data", (data) => {
   
-  console.log(`<-- ${data}`);
+  //console.log(`<-- ${data}`);
   //<-- {"dato": 9}
   if (data !== undefined) {
     try {

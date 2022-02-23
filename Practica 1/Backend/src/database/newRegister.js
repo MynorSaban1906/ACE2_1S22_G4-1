@@ -5,9 +5,10 @@ function newRegister (data) {
 
   var dataUpdated = data + getDateTime()
   newMeasure = JSON.parse(dataUpdated)
+  
 
   if (newMeasure !== undefined) {
-    console.log("data en json: ", newMeasure);
+    console.log("data en json: ", dataUpdated);
     dbConnect.collection("measure").insertOne(newMeasure, (err, res) => {
       if (err) throw err;
     });
@@ -18,10 +19,10 @@ function newRegister (data) {
 
 function getDateTime () {
   var today = new Date();
-  var date = "\n\"fecha\": \"" + today.toUTCString().slice(5, 16) + "\",";
+  var date = "\n\"fecha\": \"" + today.toLocaleDateString() + "\",";
   var time = "\n\"tiempo\": \"" + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() +"\"\n}";
 
-  var result = ", " + date + time
+  var result = date + time
   return result
 }
 
