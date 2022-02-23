@@ -7,8 +7,9 @@ export default function Experimento1() {
 
   const [Data, setData] = useState({})
 
-  const getData = () => {
-    let arduinoData = getArduinoData('URL')
+  const getData = async() => {
+    let arduinoData = await getArduinoData('http://localhost:5000/')
+    console.log(arduinoData);
     setData(arduinoData)
   }
 
@@ -20,7 +21,7 @@ export default function Experimento1() {
   return (
     <>
       <Navbar/>
-      <ReLineChart description="Temperatura (°C) VS Tiempo (Fecha y hora)" data={Data} XAxis="fecha_hora" lineName1="Temperatura Interna" lineName2="Temperatura Externa" />
+      <ReLineChart description="Temperatura (°C) VS Tiempo (Fecha y hora)" data={Data} XAxis="fecha_hora" lineName1="temperatura_interna" lineName2="temperatura_externa" />
     </>
     
   )

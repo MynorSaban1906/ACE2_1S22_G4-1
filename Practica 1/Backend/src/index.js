@@ -1,6 +1,7 @@
 // serial communication
 const serialPort = require('serialport')
 const readLine = require("@serialport/parser-readline");
+const cors = require('cors');
 
 
 const serial = new serialPort('COM3', {autoOpen:false, baudRate: 9600 })
@@ -16,8 +17,12 @@ const newRegister = require("./database/newRegister")
 const app = express();
 const PORT = 5000;
 
+app.use(cors({
+  origin: '*'
+}));
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(indexRoutes);
 
 // perform a database connection when the server starts
