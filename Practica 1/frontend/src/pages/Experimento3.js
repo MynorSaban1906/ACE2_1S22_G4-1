@@ -16,6 +16,14 @@ export default function Experimento3() {
     getData();
   },[]);
 
+  useEffect(() =>{
+    var handle = setInterval(getData, 3000)
+
+    return () => {
+      clearInterval(handle)
+    }
+  });
+
   return (
     <>
       <Navbar/>
