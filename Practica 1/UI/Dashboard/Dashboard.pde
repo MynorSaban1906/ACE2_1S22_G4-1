@@ -31,8 +31,8 @@ void draw() {
     mod.display();
   }
   sensorLuz(cantidadLuz);
-  graficoTemperatura(100, temperaturaInterna, "Temperatura del ambiente");
-  graficoTemperatura(400, temperaturaExterna, "Temperatura en el interior");
+  graficoTemperatura(100, temperaturaInterna, "Temperatura del Interior");
+  graficoTemperatura(400, temperaturaExterna, "Temperatura en el Ambiente");
   sensorHumedad(humedad);
   sensorCO2(medicionCO2);
   
@@ -93,7 +93,7 @@ void sensorLuz(int luz) {
   ellipse(100, 200, cir, cir);
   fill(255);
   textSize(48);
-  text(luz +" unidad",270, 220);
+  text(luz +" Lumen",270, 220);
 }
 
 
