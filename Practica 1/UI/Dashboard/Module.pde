@@ -22,7 +22,7 @@ class Module {
   }
   
   // Custom method for updating the variables
-  void update(int speed) {
+  void update(float speed) {
     x = x + (speed * xDirection);
     if (x >= unit || x <= 0) {
       xDirection *= -1;

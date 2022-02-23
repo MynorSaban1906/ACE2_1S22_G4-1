@@ -26,7 +26,7 @@ void draw() {
   setTitle();
   
   for (Module mod : mods) {
-    mod.update(obtenerRepresentacionVelCo2());
+    mod.update(obtenerRepresentacionVelCo2(medicionCO2));
     //mod.setUnit(10);
     mod.display();
   }
@@ -88,7 +88,7 @@ void sensorLuz(int luz) {
   text("Luz del ambiente", 200, 130);
   int cir=100;
   noStroke();
-  float distance=abs(luz-cir);
+  float distance=abs(luz-cir-800);
   fill(distance, distance, 0);
   ellipse(100, 200, cir, cir);
   fill(255);
@@ -160,6 +160,18 @@ void ejecutar(int unit, float speed) {
   }
 }
 
-int obtenerRepresentacionVelCo2(){
-  return 120;
+float obtenerRepresentacionVelCo2(int ppm){
+  float speed=0;
+  if(ppm < 300) speed=0.56;
+  else if(ppm >= 300 && ppm < 500) speed=0.8;
+  else if(ppm >= 500 && ppm < 800) speed=5;
+  else if(ppm >= 800 && ppm < 1200) speed=80;
+  else if(ppm >= 1200) speed=200;
+  
+  return speed;
 }
+
+
+//float validarIntensidadLuz(int luz){
+//  rerturn 0;
+//}
