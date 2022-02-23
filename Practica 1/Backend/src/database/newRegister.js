@@ -19,11 +19,8 @@ function newRegister (data) {
 
 function getDateTime () {
   var today = new Date();
-  var date = "\n\"fecha\": \"" + today.toLocaleDateString() + "\",";
-  var time = "\n\"tiempo\": \"" + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() +"\"\n}";
-
-  var result = date + time
-  return result
+  var time = "\n\"fecha_hora\":" + "\"" + today.toLocaleDateString() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() +"\"\n}";
+  return time;
 }
 
 module.exports = newRegister;
