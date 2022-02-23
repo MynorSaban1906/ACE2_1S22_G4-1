@@ -33,7 +33,7 @@ void draw() {
   sensorLuz(cantidadLuz);
   graficoTemperatura(100, temperaturaInterna, "Temperatura del Interior");
   graficoTemperatura(400, temperaturaExterna, "Temperatura en el Ambiente");
-  sensorHumedad(humedad);
+  sensorHumedad(70);
   sensorCO2(medicionCO2);
   
   current = millis();
@@ -134,6 +134,7 @@ void sensorHumedad(int humedad){
   fill(255);
   textSize(128);
   text(humedad +"%", 890, 300);
+  representarHumedad(650,230,humedad);
 }
 
 
@@ -172,6 +173,42 @@ float obtenerRepresentacionVelCo2(int ppm){
 }
 
 
-//float validarIntensidadLuz(int luz){
-//  rerturn 0;
-//}
+void representarHumedad(int x,int y, int humedad) {
+  if(humedad == 0){
+    fill(139,0,0);
+    rect(x, 535-y, 80, 5);
+  } else if(humedad > 0 && humedad < 10 ){
+    fill(255,0,0);
+    rect(x, 525-y, 80, 15);
+  } else if(humedad >= 10 && humedad < 20){
+    fill(255,140,0);
+    rect(x, 510-y, 80, 30);
+  } else if(humedad >= 20 && humedad < 30){
+    fill(255, 255, 0);
+    rect(x, 500-y, 80, 40);
+  } else if(humedad >= 30 && humedad < 40){
+    fill(173,255,47);
+    rect(x, 485-y, 80, 55);
+  } else if(humedad >= 40 && humedad < 50){
+    fill(0, 255, 0);
+    rect(x, 470-y, 80, 70);
+  } else if(humedad >= 50 && humedad < 60){
+    fill(127,255,212);
+    rect(x, 455-y, 80, 85);
+  } else if(humedad >= 60 && humedad < 70){
+    fill(0, 255, 255);
+    rect(x, 440-y, 80, 100);
+  } else if(humedad >= 70 && humedad < 80){
+    fill(70,130,180);
+    rect(x, 425-y, 80, 115);
+  } else if(humedad >= 80 && humedad < 90){
+    fill(0, 0, 255);
+    rect(x, 410-y, 80, 130);
+  } else if(humedad >= 90 && humedad < 100){
+    fill(0,0,139);
+    rect(x, 395-y, 80, 145);
+  } else if(humedad >= 100){
+    fill(75,0,130);
+    rect(x, 381-y, 80, 159);
+  }  
+}
