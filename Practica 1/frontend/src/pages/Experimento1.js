@@ -7,9 +7,8 @@ export default function Experimento1() {
 
   const [Data, setData] = useState({})
 
-  const getData = async() => {
+  const getData = async () => {
     let arduinoData = await getArduinoData('http://localhost:5000/')
-    console.log(arduinoData);
     setData(arduinoData)
   }
 

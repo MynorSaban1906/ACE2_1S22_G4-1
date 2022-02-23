@@ -1,0 +1,25 @@
+.banner-image{
+    background-image: url('../images/mainImage.png');
+    background-size: cover;
+}
+
+.nameTitle{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+}
+
+.description{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 4rem;
+}
+
+@media (max-width: 760px) {
+    .nameTitle{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1rem;
+    }
+    .description{
+        font-family: 'Work Sans', sans-serif;
+        font-size: 2rem;
+    }
+}

@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div className="container p-2">
-            <a className="navbar-brand" href="/">Practica 1</a>
+            <a className="navbar-brand" href="/">Práctica 1</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
