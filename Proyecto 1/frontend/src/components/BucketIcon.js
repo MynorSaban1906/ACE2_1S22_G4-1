@@ -6,13 +6,13 @@ export default function BucketIcon(props) {
     <svg style={{width: '40px'}} xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="40 0 430 550">
 		<defs>
             <clipPath id="cut-off-bottom-2">
-                <rect x="0" y="20" width="1000" height={props.bucket}/>
+                <rect x="0" y="200" width="1000" height={props.bucket}/>
             </clipPath>
         </defs>
-<g class="currentLayer">
+<g className="currentLayer">
 	<title>Layer 1</title>
-		<path fill="#ffffff" fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" id="svg_53" d="M 118.92134611131924 263.17752875388385 C 118.92134611131924 263.17752875388385 160.49438048739455 495.7618021551701 160.1123595505618 495.50561797752806 C 160.49438048739455 495.7618021551701 350.38202398892776 496.3235999170089 350 496.0674157303371 C 350.38202398892776 496.3235999170089 400.3820247925858 219.3573033304531 400 219.1011235955056 C 400.3820247925858 219.3573033304531 110.49437968373638 219.3573033304531 110.49437968373638 219.3573033304531" style={{color:"rgb(0, 0, 0)"}}/>
-		<path className='cls-1' fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="1" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" id="svg_53" d="M 118.92134611131924 263.17752875388385 C 118.92134611131924 263.17752875388385 160.49438048739455 495.7618021551701 160.1123595505618 495.50561797752806 C 160.49438048739455 495.7618021551701 350.38202398892776 496.3235999170089 350 496.0674157303371 C 350.38202398892776 496.3235999170089 400.3820247925858 219.3573033304531 400 219.1011235955056 C 400.3820247925858 219.3573033304531 110.49437968373638 219.3573033304531 110.49437968373638 219.3573033304531" style={{color:"rgb(0, 0, 0)"}} clipPath="url(#cut-off-bottom-2)"/>
+		<path fill="#2fa4ff" fillOpacity="1" stroke="#222222" strokeOpacity="1" strokeWidth="2" strokeDasharray="none" strokeLinejoin="round"strokeLinecap="butt" strokeDashoffset="" fillRule="nonzero" opacity="1"markerStart="" markerMid="" markerEnd="" id="svg_53" d="M 118.92134611131924 263.17752875388385 C 118.92134611131924 263.17752875388385 160.49438048739455 495.7618021551701 160.1123595505618 495.50561797752806 C 160.49438048739455 495.7618021551701 350.38202398892776 496.3235999170089 350 496.0674157303371 C 350.38202398892776 496.3235999170089 400.3820247925858 219.3573033304531 400 219.1011235955056 C 400.3820247925858 219.3573033304531 110.49437968373638 219.3573033304531 110.49437968373638 219.3573033304531" style={{color:"rgb(0, 0, 0)"}}/>
+		<path className='cls-1' fillOpacity="1" stroke="#222222" strokeOpacity="1" strokeWidth="1" strokeDasharray="none" strokeLinejoin="round"strokeLinecap="butt" strokeDashoffset="" fillRule="nonzero" opacity="1"markerStart="" markerMid="" markerEnd="" id="svg_53" d="M 118.92134611131924 263.17752875388385 C 118.92134611131924 263.17752875388385 160.49438048739455 495.7618021551701 160.1123595505618 495.50561797752806 C 160.49438048739455 495.7618021551701 350.38202398892776 496.3235999170089 350 496.0674157303371 C 350.38202398892776 496.3235999170089 400.3820247925858 219.3573033304531 400 219.1011235955056 C 400.3820247925858 219.3573033304531 110.49437968373638 219.3573033304531 110.49437968373638 219.3573033304531" style={{color:"rgb(0, 0, 0)"}} clipPath="url(#cut-off-bottom-2)"/>
 	<g id="svg_1">
 	<g id="svg_2">
 		<rect x="212.21800231933594" y="466.9419860839844" width="87.55000305175781" height="15.87600040435791" id="svg_3"/>
@@ -76,6 +76,6 @@ export default function BucketIcon(props) {
 </g><g id="svg_49">
 </g><g id="svg_50">
 </g><g id="svg_51">
-</g><path fill="#4a90d6" fill-opacity="1" stroke="#222222" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" id="svg_52" d="M112.17977296925295,220.48089885413083 "/></g></svg>
+</g><path fill="#4a90d6" fillOpacity="1" stroke="#222222" strokeOpacity="1" strokeWidth="2" strokeDasharray="none" strokeLinejoin="round" strokeLinecap="butt" strokeDashoffset="" fillRule="nonzero" opacity="1" markerStart="" markerMid="" markerEnd="" id="svg_52" d="M112.17977296925295,220.48089885413083 "/></g></svg>
   )
 }
