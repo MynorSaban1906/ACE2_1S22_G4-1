@@ -11,10 +11,11 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="mx-auto"></div>
             <div className="navbar-nav">
-                <a className="nav-link" href="/Experimento1">Experimento 1</a>
-                <a className="nav-link" href="/Experimento2">Experimento 2</a>
-                <a className="nav-link" href="/Experimento3">Experimento 3</a>
-                <a className="nav-link" href="/GraficaCO2">Gráfica CO2</a>
+                <a className="nav-link" href="/Exp1">Suciedad vs Tiempo</a>
+                <a className="nav-link" href="/Exp2">Humedad vs Tiempo</a>
+                <a className="nav-link" href="/Exp3">Agua vs Tiempo</a>
+                <a className="nav-link" href="/Exp4">Suciedad vs Tiempo (DF)</a>
+                <a className="nav-link" href="/Exp5">Cantidad de agua</a>
             </div>
             </div>
         </div>

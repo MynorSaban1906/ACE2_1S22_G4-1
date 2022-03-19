@@ -33,7 +33,7 @@ export default function Dashboard() {
             <div className="row text-center infoPadding">
                 <div className="col-md-3 d-flex justify-content-center align-items-center">
                     <div className="info-card border">
-                        <span style={{fontSize: 40, color: Data.suciedadInicial == 1 ? '#2FA4FF' : '#534340'}}>
+                        <span style={{fontSize: 40, color: Data.suciedadInicial === 1 ? '#2FA4FF' : '#534340'}}>
                             <i className="fa-solid fa-droplet mb-4"></i>
                         </span>
                         <h5>Suciedad de Agua (Casa)</h5>
@@ -51,7 +51,7 @@ export default function Dashboard() {
                 </div>
                 <div className="col-md-3 d-flex justify-content-center align-items-center">
                     <div className="info-card border">
-                        <span style={{fontSize: 40, color: Data.suciedadFinal == 1 ? '#2FA4FF' : '#534340'}}>
+                        <span style={{fontSize: 40, color: Data.suciedadFinal === 1 ? '#2FA4FF' : '#534340'}}>
                             <i className="fa-solid fa-droplet mb-4"></i>
                         </span>
                         <h5>Suciedad de Agua (Filtrado)</h5>
@@ -61,12 +61,10 @@ export default function Dashboard() {
                 </div>
                 <div className="col-md-3 d-flex justify-content-center align-items-center">
                     <div className="info-card border">
-                        <a href="/GraficaCO2" className='fill-div'>
-                            <BucketIcon bucket={300}/>
-                            <h5 className='mt-4'>Cantidad de agua almacenada</h5>
-                            <hr className="line"></hr>
-                            <p className="text-color-2 fs-3">{Data.aguaFiltrada}</p>
-                        </a>
+                        <BucketIcon bucket={300}/>
+                        <h5 className='mt-4'>Cantidad de agua almacenada</h5>
+                        <hr className="line"></hr>
+                        <p className="text-color-2 fs-3">{Data.aguaFiltrada}</p>
                     </div>
                 </div>
             </div>
