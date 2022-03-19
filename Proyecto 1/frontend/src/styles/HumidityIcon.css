@@ -1,0 +1,30 @@
+.ikoncircle {
+    position: absolute;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(20, 19, 23, 0.8);
+  }
+  
+  #can {
+    right: 0.1%;
+    bottom: 24%;
+  }
+  
+  .genelsvgs {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    width: 26px;
+  }
+  
+  .cls-1 {
+    fill: blue;
+  }
+  
+  .bg {
+    fill: #fff;
+  }
