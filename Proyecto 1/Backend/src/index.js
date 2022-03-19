@@ -41,17 +41,36 @@ dbo.connectToServer(function (err) {
 
 // ==================== SERIAL COMMUNICATION ====================
 
+
+
+// ==================== SERIAL COMMUNICATION ====================
+
+serial.open(function(err){
+         
+  if(err){
+      //alert("Failed to open port.");
+      console.log("error-----------")
+  }
+  else{
+      console.log("NO error-----------")
+  }
+
+});
 serial.on("open", () => {
   console.log("Open serial port");
 });
 
 parser.on("data", (data) => {
+  
   //console.log(`<-- ${data}`);
+  //<-- {"dato": 9}
   if (data !== undefined) {
     try {
-      newRegister(data);
+
+      newRegister(data)
     } catch (error) {
       console.log(`Error to insert in mongo: ${error}`);
     }
   }
+
 });
