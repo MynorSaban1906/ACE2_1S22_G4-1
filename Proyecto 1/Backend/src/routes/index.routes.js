@@ -21,4 +21,18 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/ultimoDato", (req, res) => {
+  const dbConnect = dbo.getDb();
+  dbConnect
+    .collection("measure")
+    .find({}).sort({'_id':-1}).limit(1)
+    .toArray(function (err, result) {
+      if (err) {
+        res.status(400).send("Error fetching measures!");
+      } else {
+        res.json(result[0]);
+      }
+    });
+});
+
 module.exports = router;

@@ -13,11 +13,15 @@ export default function Dashboard() {
     const [bucket, setBucket] = useState('1000')
 
     const getData = async () => {
-        let arduinoData = await getArduinoData('http://localhost:5000/')
+        let arduinoData = await getArduinoData('http://localhost:5000/ultimoDato')
         setData(arduinoData)
     }
   
+    useEffect(() =>{
+        getData();
+      },[]);
 
+    
     useEffect(() => {
         var handle = setInterval(getData, 3000)
 
@@ -25,6 +29,8 @@ export default function Dashboard() {
         clearInterval(handle)
         }
     })
+
+    console.log(Data);
 
     return (
         <div className="container" id="qualities">
@@ -37,17 +43,17 @@ export default function Dashboard() {
                             </span>
                             <h5>Suciedad de Agua (Casa)</h5>
                             <hr className="line"></hr>
-                            <p className="text-color-2 fs-3"> 4562 F</p>
+                            <p className="text-color-2 fs-3">{Data.suciedadInicial}</p>
                         </a>
                     </div>
                 </div>
                 <div className="col-md-3 d-flex justify-content-center align-items-center">
                     <div className="info-card border">
                         <a href="/Experimento2" className='fill-div'>
-                            <HumidityIcon humedad={humedad}/>
+                            <HumidityIcon humedad={100}/>
                             <h5 className='mt-4'>Humedad en el suelo del jardín</h5>
                             <hr className="line"></hr>
-                            <p className="text-color-2 fs-3">34 %</p>
+                            <p className="text-color-2 fs-3">{Data.humedadSuelo}</p>
                         </a>
                     </div>
                 </div>
@@ -59,7 +65,7 @@ export default function Dashboard() {
                             </span>
                             <h5>Suciedad de Agua (Filtrado)</h5>
                             <hr className="line"></hr>
-                            <p className="text-color-2 fs-3">4235 F</p>
+                            <p className="text-color-2 fs-3">{Data.suciedadFinal}</p>
                         </a>
                     </div>
                 </div>
@@ -69,7 +75,7 @@ export default function Dashboard() {
                             <BucketIcon bucket={bucket}/>
                             <h5 className='mt-4'>Cantidad de agua almacenada</h5>
                             <hr className="line"></hr>
-                            <p className="text-color-2 fs-3"> 43 cm/s</p>
+                            <p className="text-color-2 fs-3">{Data.aguaFiltrada}</p>
                         </a>
                     </div>
                 </div>
