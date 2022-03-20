@@ -27,7 +27,7 @@ export default function Experimento4() {
   return (
     <>
       <Navbar/>
-      <ReLineChart description="Cantidad de suciedad VS Tiempo (DF)" data={Data} XAxis="fecha" lineName1="suciedadFinal" lineColor="#D82148"/>
+      <ReLineChart description="Cantidad de suciedad VS Tiempo (DF)" data={Data} XAxis="fechaHora" lineName1="suciedadFinal" lineColor="#D82148"/>
     </>
   )
 }

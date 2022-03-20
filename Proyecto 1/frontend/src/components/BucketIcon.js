@@ -6,7 +6,7 @@ export default function BucketIcon(props) {
     <svg style={{width: '40px'}} xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="40 0 430 550">
 		<defs>
             <clipPath id="cut-off-bottom-2">
-                <rect x="0" y="200" width="1000" height={props.bucket}/>
+                <rect x="0" y="200" width="1000" height={300 - (3/70 * props.bucket)}/>
             </clipPath>
         </defs>
 <g className="currentLayer">

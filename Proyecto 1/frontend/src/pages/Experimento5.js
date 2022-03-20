@@ -27,7 +27,7 @@ export default function Experimento5() {
   return (
     <>
       <Navbar/>
-      <ReLineChart description="Tiempo requerido para la cantidad de agua" data={Data} XAxis="fecha" lineName1="suciedadFinal" lineColor="#FF7BA9"/>
+      <ReLineChart description="Tiempo requerido para la cantidad de agua" data={Data} XAxis="fechaHora" lineName1="aguaCaudal" lineColor="#FF7BA9"/>
     </>
   )
 }

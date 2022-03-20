@@ -27,7 +27,7 @@ export default function Experimento2() {
   return (
     <>
       <Navbar/>
-      <ReLineChart description="Humedad en el suelo VS Tiempo" data={Data} XAxis="fecha" lineName1="humedadSuelo" lineColor="#39AEA9"/>
+      <ReLineChart description="Humedad en el suelo VS Tiempo" data={Data} XAxis="fechaHora" lineName1="humedadSuelo" lineColor="#39AEA9"/>
     </>
   )
 }

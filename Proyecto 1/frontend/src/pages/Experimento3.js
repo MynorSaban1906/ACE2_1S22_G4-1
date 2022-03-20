@@ -27,7 +27,7 @@ export default function Experimento3() {
   return (
     <>
       <Navbar/>
-      <ReLineChart description="Cantidad de agua VS Tiempo" data={Data} XAxis="fecha" lineName1="aguaFiltrada" lineColor="#FFC300"/>
+      <ReLineChart description="Cantidad de agua VS Tiempo" data={Data} XAxis="fechaHora" lineName1="aguaFiltrada" lineColor="#FFC300"/>
     </>
   )
 }

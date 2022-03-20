@@ -38,7 +38,7 @@ export default function Dashboard() {
                         </span>
                         <h5>Suciedad de Agua (Casa)</h5>
                         <hr className="line"></hr>
-                        <p className="text-color-2 fs-3">{Data.suciedadInicial}</p>
+                        <p className="text-color-2 fs-3">{Data.suciedadInicial === 1 ? 'Limpio' : 'Sucio'}</p>
                     </div>
                 </div>
                 <div className="col-md-3 d-flex justify-content-center align-items-center">
@@ -56,15 +56,16 @@ export default function Dashboard() {
                         </span>
                         <h5>Suciedad de Agua (Filtrado)</h5>
                         <hr className="line"></hr>
-                        <p className="text-color-2 fs-3">{Data.suciedadFinal}</p>
+                        <p className="text-color-2 fs-3">{Data.suciedadFinal  === 1 ? 'Limpio' : 'Sucio'}</p>
                     </div>
                 </div>
                 <div className="col-md-3 d-flex justify-content-center align-items-center">
                     <div className="info-card border">
-                        <BucketIcon bucket={300}/>
+                        <BucketIcon bucket={Data.aguaFiltrada}/>
                         <h5 className='mt-4'>Cantidad de agua almacenada</h5>
                         <hr className="line"></hr>
-                        <p className="text-color-2 fs-3">{Data.aguaFiltrada}</p>
+                        <p className="text-color-2 fs-3">{Data.aguaFiltrada} cm3</p>
+                        <p className="text-color-2 fs-3">{Data.aguaCaudal} cm3/s</p>
                     </div>
                 </div>
             </div>
