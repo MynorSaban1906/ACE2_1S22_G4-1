@@ -5,4 +5,4 @@ Objetivos:
 - Implementar una aplicación Web que permita visualizar magnitudes físicas digitalizadas para una comprensión de datos humanamente legible.
 - Aprender a desarrollar una solución mediante la correcta implementación del framework de IoT.
 
-## Vídeo: 
+## Vídeo: https://youtu.be/XmhZyIrQCAI  
