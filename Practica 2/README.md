@@ -1,19 +1,12 @@
 # Práctica 2
 
-Toda la documentación deberá de realizarla basado en el Smart Connect Framework los gráficos que presentará nos permitirán
-saber si la solución del proyecto resolverá o no el problema planteado, para la solución tecnológica.
-
-Su equipo de trabajo realizará la presentación con el siguiente flujo:
-- Descripción del problema
-- Descripción de la solución
-- Presentar el diseño de la solución tecnológica, haciendo uso de sensores y actuadores.
-- Descripción de los componentes tecnológicos para la solución del problema.
-
-## Realización de documentación
-Se realizará la documentación correspondiente con detalles que destaquen el funcionamiento, usos, beneficios e impacto ambiental.
-
-## Bocetos de prototipos
-Bocetos de cada parte de realización de prototipos
-
-## Prototipo propuesto
-Realización de prototipo sin funcionamiento.
+En la documentacion debera de llevar todo lo correspondiente al desarrollo tomando
+como base el Framework de iot, dicho lo anterior se solicita:
+- Introducción
+- Bocetos del prototipo
+- Imagenes de construcción del prototipo
+- Desarrollo de contenido que destaque el funcionamiento, usos, beneficios e impacto ambiental, entre otros aspectos que considere el estudiante.
+- Capas del framework de Iot.
+- Link del repositorio de github.
+- Link de video youtube con avances en el desarrollo del prototipo y funcionamiento
+La documentación deberá de ser presentada con el formato IEEE.
