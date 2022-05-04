@@ -1,6 +1,13 @@
+// serial communication
+const serialPort = require("serialport");
+const readLine = require("@serialport/parser-readline");
 const cors = require("cors");
 
+const serial = new serialPort("COM3", { autoOpen: false, baudRate: 9600 });
+const parser = serial.pipe(new readLine({ delimiter: "\n" }));
+
 // ==================== EXPRESS && MONGO ====================
+
 const express = require("express");
 const indexRoutes = require("./routes/index.routes");
 const dbo = require("./database/conn");
@@ -28,6 +35,36 @@ dbo.connectToServer(function (err) {
 
   // start the server
   app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port: ${PORT}`);
   });
+});
+
+// ==================== SERIAL COMMUNICATION ====================
+serial.open(function(err){
+         
+  if(err){
+      console.log("--- ERROR")
+      console.log(err);
+  }
+  else{
+      console.log("--- CORRECTO")
+  }
+
+});
+
+serial.on("open", () => {
+  console.log("Open serial port");
+});
+
+parser.on("data", (data) => {
+  console.log(`<-- ${data}`);
+
+  /* if (data !== undefined) {
+    try {
+
+      newRegister(data)
+    } catch (error) {
+      console.log(`Error to insert in mongo: ${error}`);
+    }
+  } */
 });
