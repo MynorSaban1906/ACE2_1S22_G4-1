@@ -4,12 +4,13 @@ function newRegister(data) {
   const dbConnect = dbo.getDb();
 
   var dataUpdated = data + getDateTime();
-  newMeasure = JSON.parse(dataUpdated);
+  textJSON = JSON.parse(JSON.parse(dataUpdated));
+  //newMeasure = JSON.parse(dataUpdated);
 
-  if (newMeasure !== undefined) {
-    //console.log("data in JSON: ", dataUpdated);
+  if (textJSON !== undefined) {
+    console.log("Mongo <-- ", textJSON);
     console.log("-- Nuevo registro");
-    dbConnect.collection("measure").insertOne(newMeasure, (err, res) => {
+    dbConnect.collection("measure").insertOne(textJSON, (err, res) => {
       if (err) throw err;
     });
   }
