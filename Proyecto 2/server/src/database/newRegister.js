@@ -5,7 +5,11 @@ function newRegister(data) {
     const dbConnect = dbo.getDb();
 
     var dataUpdated = data + getDateTime();
-    textJSON = JSON.parse(JSON.parse(dataUpdated));
+    dataUpdated = dataUpdated.replace(/\\/g, '');
+    dataUpdated = dataUpdated.slice(1,-1);
+    console.log(dataUpdated);
+    textJSON = JSON.parse(dataUpdated);
+    
     //newMeasure = JSON.parse(dataUpdated);
 
     if (textJSON !== undefined) {
@@ -17,6 +21,7 @@ function newRegister(data) {
     }
   } catch (error) {
     console.log("----- Pasa ----- ");
+    console.log(error);
   }
 
 
@@ -25,18 +30,18 @@ function newRegister(data) {
 function getDateTime() {
   var today = new Date();
   var time =
-    '\n"fecha":' +
-    '"' +
+    'fecha\\":' +
+    '\\"' +
     today.toLocaleDateString() +
-    '",' +
-    '\n"hora":' +
-    '"' +
+    '\\",' +
+    '\\"hora\\":' +
+    '\\"' +
     today.getHours() +
     ":" +
     today.getMinutes() +
     ":" +
     today.getSeconds() +
-    '"\n}';
+    '\\"}"';
   return time;
 }
 
