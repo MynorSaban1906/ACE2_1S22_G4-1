@@ -7,7 +7,7 @@ function newRegister(data) {
     var dataUpdated = data + getDateTime();
     dataUpdated = dataUpdated.replace(/\\/g, '');
     dataUpdated = dataUpdated.slice(1,-1);
-    console.log(dataUpdated);
+    //console.log(dataUpdated);
     textJSON = JSON.parse(dataUpdated);
     
     //newMeasure = JSON.parse(dataUpdated);
@@ -21,7 +21,7 @@ function newRegister(data) {
     }
   } catch (error) {
     console.log("----- Pasa ----- ");
-    console.log(error);
+    //console.log(error);
   }
 
 
