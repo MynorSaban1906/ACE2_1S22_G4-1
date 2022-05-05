@@ -1,19 +1,25 @@
 const dbo = require("./conn");
 
 function newRegister(data) {
-  const dbConnect = dbo.getDb();
+  try {
+    const dbConnect = dbo.getDb();
 
-  var dataUpdated = data + getDateTime();
-  textJSON = JSON.parse(JSON.parse(dataUpdated));
-  //newMeasure = JSON.parse(dataUpdated);
+    var dataUpdated = data + getDateTime();
+    textJSON = JSON.parse(JSON.parse(dataUpdated));
+    //newMeasure = JSON.parse(dataUpdated);
 
-  if (textJSON !== undefined) {
-    console.log("Mongo <-- ", textJSON);
-    console.log("-- Nuevo registro");
-    dbConnect.collection("measure").insertOne(textJSON, (err, res) => {
-      if (err) throw err;
-    });
+    if (textJSON !== undefined) {
+      console.log("Mongo <-- ", textJSON);
+      console.log("-- Nuevo registro");
+      dbConnect.collection("measure").insertOne(textJSON, (err, res) => {
+        if (err) throw err;
+      });
+    }
+  } catch (error) {
+    console.log("----- Pasa ----- ");
   }
+
+
 }
 
 function getDateTime() {
