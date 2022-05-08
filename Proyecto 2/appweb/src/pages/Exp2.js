@@ -40,6 +40,8 @@ export default function Exp2() {
               <li><a className="dropdown-item" onClick={() => setFecha('6/5/2022')}>06/05/2022</a></li>
               <li><a className="dropdown-item" onClick={() => setFecha('7/5/2022')}>07/05/2022</a></li>
               <li><a className="dropdown-item" onClick={() => setFecha('8/5/2022')}>08/05/2022</a></li> 
+              <li><a className="dropdown-item" onClick={() => setFecha('9/5/2022')}>09/05/2022</a></li> 
+              <li><a className="dropdown-item" onClick={() => setFecha('10/5/2022')}>10/05/2022</a></li>
           </ul>
         </div>
       </div>
