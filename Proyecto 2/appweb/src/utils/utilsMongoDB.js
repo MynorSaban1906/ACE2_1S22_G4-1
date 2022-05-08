@@ -17,7 +17,7 @@ export async function getArduinoDataFecha(urlDB,data){
             'Content-Type': 'application/json',
             mode: "no-cors",
         },
-        body: data
+        body: JSON.stringify(data)
     }).then(res => res.json())
     
     .catch((error) => console.log(error));

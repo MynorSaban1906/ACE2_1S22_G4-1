@@ -36,10 +36,11 @@ export default function Exp1() {
               Filtar por fecha
           </button>
           <ul className="dropdown-menu">
-              <li><a className="dropdown-item" onClick={() => setFecha('1/2/2022')}>01/02/2022</a></li>
-              <li><a className="dropdown-item" onClick={() => setFecha('2/2/2022')}>02/02/2022</a></li>
-              <li><a className="dropdown-item" onClick={() => setFecha('3/2/2022')}>03/02/2022</a></li>
-              <li><a className="dropdown-item" onClick={() => setFecha('4/2/2022')}>04/02/2022</a></li>
+              <li><a className="dropdown-item" onClick={() => setFecha('4/5/2022')}>04/05/2022</a></li>
+              <li><a className="dropdown-item" onClick={() => setFecha('5/5/2022')}>05/05/2022</a></li>
+              <li><a className="dropdown-item" onClick={() => setFecha('6/5/2022')}>06/05/2022</a></li>
+              <li><a className="dropdown-item" onClick={() => setFecha('7/5/2022')}>07/05/2022</a></li>
+              <li><a className="dropdown-item" onClick={() => setFecha('8/5/2022')}>08/05/2022</a></li> 
           </ul>
         </div>
       </div>

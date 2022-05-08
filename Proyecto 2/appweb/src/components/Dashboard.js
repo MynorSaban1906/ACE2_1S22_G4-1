@@ -9,22 +9,22 @@ export default function Dashboard() {
     const [Data, setData] = useState({})
 
     const getData = async () => {
-        let arduinoData = await getArduinoData('http://localhost:5000/ultimoDato')
+        let arduinoData = await getArduinoData('http://localhost:5000/lastRecord')
         setData(arduinoData)
     }
   
-    // useEffect(() =>{
-    //     getData();
-    //   },[]);
+    useEffect(() =>{
+         getData();
+       },[]);
 
     
-    // useEffect(() => {
-    //     var handle = setInterval(getData, 3000)
+    useEffect(() => {
+        var handle = setInterval(getData, 3000)
 
-    //     return () => {
-    //     clearInterval(handle)
-    //     }
-    // })
+        return () => {
+        clearInterval(handle)
+        }
+    })
 
     console.log(Data);
 
