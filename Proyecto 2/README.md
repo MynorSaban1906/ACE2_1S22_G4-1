@@ -11,4 +11,4 @@
 - Aplicación móvil (Para ver los datos en tiempo real y poder prender la hornilla)
 - Video de demostración del proyecto
 
-## Link Vídeo: 
+## Link Vídeo: https://youtu.be/DtKvvXEiXfE
